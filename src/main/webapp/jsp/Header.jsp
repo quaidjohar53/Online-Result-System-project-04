@@ -13,6 +13,32 @@
 
 <head>
 
+<head>
+
+    <meta charset="UTF-8">
+    <title>ORS Project</title>
+
+    <style>
+        .navbar {
+            position: relative;
+            z-index: 1055;
+        }
+
+        .navbar .dropdown {
+            position: relative;
+        }
+
+        .navbar .dropdown-menu {
+            z-index: 1060 !important;
+            max-height: calc(100vh - 80px);
+            overflow-y: auto;
+        }
+    </style>
+
+    <!-- Your existing Bootstrap CSS links below -->
+
+</head>
+
 <meta charset="UTF-8">
 
 <title>ORS Project</title>
@@ -41,6 +67,8 @@
 		});
 	});
 </script>
+
+
 </head>
 
 <body>
@@ -391,15 +419,21 @@
 								href="<%=ORSView.BOOK_LIST_CTL%>"> Book List </a></li>
 
 
-						    <li><a class="dropdown-item" href="<%=ORSView.HOSTEL_CTL%>">
+							<li><a class="dropdown-item" href="<%=ORSView.HOSTEL_CTL%>">
 									Add Hostel </a></li>
 
 
 							<li><a class="dropdown-item"
 								href="<%=ORSView.HOSTEL_LIST_CTL%>"> Hostel List </a></li>
-							
-							
-							
+
+							<li><a class="dropdown-item"
+								href="<%=ORSView.Online_Shopping_CTL%>"> Add Online Shopping
+							</a></li>
+
+							<li><a class="dropdown-item"
+								href="<%=ORSView.Online_Shopping_LIST_CTL%>"> Online
+									Shopping List </a></li>
+
 
 
 						</ul></li>

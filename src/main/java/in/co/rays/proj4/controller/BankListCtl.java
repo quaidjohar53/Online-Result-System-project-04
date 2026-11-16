@@ -15,9 +15,6 @@ public class BankListCtl extends BaseListCtl<BankBean, BankModel> {
 		BankBean bean = new BankBean();
 		bean.setBankName(DataUtility.getString(request.getParameter("bank_name")));
 		bean.setIfscCode(DataUtility.getString(request.getParameter("ifsc_code")));
-//		bean.setPhysics(DataUtility.getInt(request.getParameter("physcis")));
-//		bean.setChemistry(DataUtility.getInt(request.getParameter("chemistry")));
-//		bean.setMaths(DataUtility.getInt(request.getParameter("maths")));
 
 		return bean;
 	}

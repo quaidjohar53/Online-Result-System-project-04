@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
- * @author Tanisha
+ * @author Quaid
  */
 public class CollegeBean extends BaseBean {
 

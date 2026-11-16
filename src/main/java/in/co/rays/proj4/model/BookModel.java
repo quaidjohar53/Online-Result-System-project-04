@@ -102,7 +102,7 @@ public class BookModel extends BaseModel<BookBean> {
 			}
 
 			if (bean.getBookName() != null && bean.getBookName().length() > 0) {
-			    sql.append(" and book_name like '" + bean.getBookName() + "%'");
+				sql.append(" and book_name like '" + bean.getBookName() + "%'");
 			}
 
 			if (bean.getCategory() != null && bean.getCategory().length() > 0) {

@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
 
-
 import in.co.rays.proj4.bean.BaseBean;
 import in.co.rays.proj4.bean.UserBean;
 import in.co.rays.proj4.exception.ApplicationException;
@@ -19,15 +18,6 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
-/**
- * Base controller class of project. It contain (1) Generic operations (2)
- * Generic constants (3) Generic work flow
- * 
- * 
- * @version 1.0
- * @Copyright (c) Rays EdTech
- */
 
 public abstract class BaseCtl<B extends BaseBean, M extends BaseModel> extends HttpServlet {
 
@@ -44,57 +34,26 @@ public abstract class BaseCtl<B extends BaseBean, M extends BaseModel> extends H
 	public static final String OP_BACK = "Back";
 	public static final String OP_LOG_OUT = "Logout";
 
-	// controller error constants
 	public static final String HAS_ERROR = "haserror";
 	public static final String MESSAGE = "message";
 
-	/**
-	 * Success message key constant
-	 */
 	public static final String MSG_SUCCESS = "success";
 
-	/**
-	 * Error message key constant
-	 */
 	public static final String MSG_ERROR = "error";
 
 	private static Logger log = Logger.getLogger(BaseCtl.class);
 
-	/**
-	 * Validates input data entered by User
-	 * 
-	 * @param request
-	 * @return
-	 */
 	protected boolean validate(HttpServletRequest request) {
 		return true;
 	}
 
-	/**
-	 * Loads list and other data required to display at HTML form
-	 * 
-	 * @param request
-	 */
 	protected void preload(HttpServletRequest request) {
 	}
 
-	/**
-	 * Populates bean object from request parameters
-	 * 
-	 * @param request
-	 * @return
-	 */
 	protected B populateBean(HttpServletRequest request) {
 		return null;
 	}
 
-	/**
-	 * Populates Generic attributes in DTO
-	 * 
-	 * @param dto
-	 * @param request
-	 * @return
-	 */
 	protected BaseBean populateDTO(BaseBean dto, HttpServletRequest request) {
 
 		String createdBy = request.getParameter("createdBy");
@@ -174,10 +133,6 @@ public abstract class BaseCtl<B extends BaseBean, M extends BaseModel> extends H
 
 	}
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -195,9 +150,6 @@ public abstract class BaseCtl<B extends BaseBean, M extends BaseModel> extends H
 
 	}
 
-	/**
-	 * Contains submit logics
-	 */
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -206,13 +158,10 @@ public abstract class BaseCtl<B extends BaseBean, M extends BaseModel> extends H
 
 		String op = DataUtility.getString(request.getParameter("operation"));
 
-		// get model
-
 		long id = DataUtility.getLong(request.getParameter("id"));
 
 		B bean = populateBean(request);
 
-		// If primary key does exist then update the record of save the record
 		if (id > 0) {
 			getModel().update(bean);
 			ServletUtility.setSuccessMessage("Data is successfully updated", request);
@@ -226,35 +175,14 @@ public abstract class BaseCtl<B extends BaseBean, M extends BaseModel> extends H
 
 	}
 
-	/**
-	 * Delete a record
-	 * 
-	 */
 	@Override
 	protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		super.doDelete(req, resp);
 	}
-	/**
-	 * Returns the VIEW page of this Controller
-	 * 
-	 * @return
-	 */
+
 	protected abstract String getView();
 
-	/**
-	 * Return View
-	 * 
-	 * @param op
-	 * @return
-	 */
-//	protected abstract String getView(String op);
-
-	/**
-	 * Get model of the controller
-	 * 
-	 * @return
-	 */
 	protected abstract M getModel();
 
 	public MessageSource getMessageSource(HttpServletRequest request) {

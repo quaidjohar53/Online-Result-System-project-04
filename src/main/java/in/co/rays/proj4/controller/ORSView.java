@@ -40,6 +40,8 @@ public interface ORSView {
 	public String HOSPITAL_LIST_VIEW = PAGE_FOLDER + "/HospitalListView.jsp";
 	public String HOSTEL_VIEW = PAGE_FOLDER + "/HostelView.jsp";
 	public String HOSTEL_LIST_VIEW = PAGE_FOLDER + "/HostelListView.jsp";
+	public String ONLINE_SHOPPING_VIEW = PAGE_FOLDER + "/OnlineShoppingView.jsp";
+	public String ONLINE_SHOPPING_LIST_VIEW = PAGE_FOLDER + "/OnlineShoppingListView.jsp";
 
 	public String USER_REGISTRATION_VIEW = PAGE_FOLDER + "/UserRegistrationView.jsp";
 	public String LOGIN_VIEW = PAGE_FOLDER + "/LoginView.jsp";
@@ -97,6 +99,8 @@ public interface ORSView {
 	public String PARKING_CTL = APP_CONTEXT + "/ctl/ParkingCtl";
 	public String PARKING_LIST_CTL = APP_CONTEXT + "/ctl/ParkingListCtl";
 	public String UPLOAD_PHOTO_CTL = APP_CONTEXT + "/ctl/uploadphoto";
+	public String Online_Shopping_CTL = APP_CONTEXT + "/ctl/OnlineShoppingCtl";
+	public String Online_Shopping_LIST_CTL = APP_CONTEXT + "/ctl/OnlineShoppinglistCtl";
 
 	public String FACULTY_VIEW = PAGE_FOLDER + "/FacultyView.jsp";
 	public String FACULTY_LIST_VIEW = PAGE_FOLDER + "/FacultyListView.jsp";
