@@ -46,8 +46,7 @@ public abstract class BaseModel<T extends BaseBean> {
 		}
 		return pk + 1;
 
-	}
-
+	} 
 	public void delete(int id) throws DatabaseException {
 		Connection conn = null;
 

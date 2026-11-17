@@ -42,6 +42,8 @@ public interface ORSView {
 	public String HOSTEL_LIST_VIEW = PAGE_FOLDER + "/HostelListView.jsp";
 	public String ONLINE_SHOPPING_VIEW = PAGE_FOLDER + "/OnlineShoppingView.jsp";
 	public String ONLINE_SHOPPING_LIST_VIEW = PAGE_FOLDER + "/OnlineShoppingListView.jsp";
+	public String ATM_VIEW = PAGE_FOLDER + "/AtmView.jsp";
+	public String ATM_LIST_VIEW = PAGE_FOLDER + "/AtmListView.jsp";
 
 	public String USER_REGISTRATION_VIEW = PAGE_FOLDER + "/UserRegistrationView.jsp";
 	public String LOGIN_VIEW = PAGE_FOLDER + "/LoginView.jsp";
@@ -101,6 +103,8 @@ public interface ORSView {
 	public String UPLOAD_PHOTO_CTL = APP_CONTEXT + "/ctl/uploadphoto";
 	public String Online_Shopping_CTL = APP_CONTEXT + "/ctl/OnlineShoppingCtl";
 	public String Online_Shopping_LIST_CTL = APP_CONTEXT + "/ctl/OnlineShoppinglistCtl";
+	public String ATM_CTL = APP_CONTEXT + "/ctl/AtmCtl";
+	public String ATM_LIST_CTL = APP_CONTEXT + "/ctl/AtmListCtl";
 
 	public String FACULTY_VIEW = PAGE_FOLDER + "/FacultyView.jsp";
 	public String FACULTY_LIST_VIEW = PAGE_FOLDER + "/FacultyListView.jsp";
@@ -146,6 +150,8 @@ public interface ORSView {
 	public String EVENT_REPORT_CTL = APP_CONTEXT + "/ctl/EventReportCtl";
 	public String BOOK_REPORT_CTL = APP_CONTEXT + "/ctl/BookReportCtl";
 	public String HOSTEL_REPORT_CTL = APP_CONTEXT + "/ctl/HostelReportCtl";
+	public String ONLINE_SHOPPING_REPORT_CTL = APP_CONTEXT + "/ctl/OnlineShoppingReportCtl";
+	public String ATM_REPORT_CTL = APP_CONTEXT + "/ctl/AtmReportCtl";
 
 	public String COURSE_REPORT_VIEW = "/reports/CourseListReport.jrxml";
 	public String STUDENT_REPORT_VIEW = "/reports/StudentListReport.jrxml";
@@ -166,5 +172,7 @@ public interface ORSView {
 	public String EVENT_REPORT_VIEW = "/reports/EventListReport.jrxml";
 	public String BOOK_REPORT_VIEW = "/reports/BookListReport.jrxml";
 	public String HOSTEL_REPORT_VIEW = "/reports/HostelListReport.jrxml";
+	public String ONLINE_SHOPPING_REPORT_VIEW = "/reports/OnlineShoppingListReport.jrxml";
+	public String ATM_REPORT_VIEW = "/reports/ATMListReport.jrxml";
 
 }

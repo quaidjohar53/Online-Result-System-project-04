@@ -12,30 +12,29 @@
 <html>
 
 <head>
-
 <head>
 
-    <meta charset="UTF-8">
-    <title>ORS Project</title>
+<meta charset="UTF-8">
+<title>ORS Project</title>
 
-    <style>
-        .navbar {
-            position: relative;
-            z-index: 1055;
-        }
+<style>
+.navbar {
+	position: relative;
+	z-index: 1055;
+}
 
-        .navbar .dropdown {
-            position: relative;
-        }
+.navbar .dropdown {
+	position: relative;
+}
 
-        .navbar .dropdown-menu {
-            z-index: 1060 !important;
-            max-height: calc(100vh - 80px);
-            overflow-y: auto;
-        }
-    </style>
+.navbar .dropdown-menu {
+	z-index: 1060 !important;
+	max-height: calc(100vh - 80px);
+	overflow-y: auto;
+}
+</style>
 
-    <!-- Your existing Bootstrap CSS links below -->
+<!-- Your existing Bootstrap CSS links below -->
 
 </head>
 
@@ -433,6 +432,12 @@
 							<li><a class="dropdown-item"
 								href="<%=ORSView.Online_Shopping_LIST_CTL%>"> Online
 									Shopping List </a></li>
+
+							<li><a class="dropdown-item" href="<%=ORSView.ATM_CTL%>">
+									Add ATM </a></li>
+
+							<li><a class="dropdown-item"
+								href="<%=ORSView.ATM_LIST_CTL%>"> ATM List </a></li>
 
 
 
