@@ -132,7 +132,7 @@
 									class="text-danger">*</span>
 								</label> <input type="number" name="cashAvailable" class="form-control"
 									min="0" step="0.01"
-									value="<%=DataUtility.getStringData(bean.getCashAvailable())%>"
+								value="<%=DataUtility.getStringData(bean.getCashAvailable())%>"
 									placeholder="Enter available cash"> <small
 									class="text-danger"> <%=ServletUtility.getErrorMessage("cashAvailable", request)%>
 								</small>

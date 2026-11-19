@@ -1,9 +1,11 @@
+
 package in.co.rays.proj4.controller;
 
 import in.co.rays.proj4.bean.ATMBean;
 import in.co.rays.proj4.model.AtmModel;
 import in.co.rays.proj4.util.DataUtility;
 import in.co.rays.proj4.util.DataValidator;
+
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 
@@ -12,47 +14,42 @@ public class AtmCtl extends BaseCtl<ATMBean, AtmModel> {
 
 	@Override
 	protected boolean validate(HttpServletRequest request) {
+
 		boolean pass = true;
 
-		if (DataValidator.isNull(request.getParameter("Location"))) {
-			request.setAttribute("Location", "Location is required");
+		if (DataValidator.isNull(request.getParameter("location"))) {
+			request.setAttribute("location", "Location is required");
 			pass = false;
 		}
 
-		if (DataValidator.isNull(request.getParameter("BankName"))) {
-			request.setAttribute("BankName", "Bank Name is required");
-			pass = false;
-
-		}
-
-		if (DataValidator.isNull(request.getParameter("CashAvailable"))) {
-			request.setAttribute("CashAvailable", "Cash Available is required");
+		if (DataValidator.isNull(request.getParameter("bankName"))) {
+			request.setAttribute("bankName", "Bank Name is required");
 			pass = false;
 		}
 
-		if (DataValidator.isNull(request.getParameter("Status"))) {
-			request.setAttribute("Status", "Status is required");
+		if (DataValidator.isNull(request.getParameter("cashAvailable"))) {
+			request.setAttribute("cashAvailable", "Cash Available is required");
 			pass = false;
 		}
 
-		if (DataValidator.isNull(request.getParameter("ID"))) {
-			request.setAttribute("ID", "ID is required");
+		if (DataValidator.isNull(request.getParameter("status"))) {
+			request.setAttribute("status", "Status is required");
 			pass = false;
 		}
 
 		return pass;
-
 	}
 
 	@Override
 	protected ATMBean populateBean(HttpServletRequest request) {
+
 		ATMBean bean = new ATMBean();
 
-		bean.setId(DataUtility.getLong(request.getParameter("ID")));
-		bean.setLocation(DataUtility.getString(request.getParameter("Location")));
-		bean.setBankName(DataUtility.getString(request.getParameter("BankName")));
-		bean.setCashAvailable(DataUtility.getString(request.getParameter("CashAvailable")));
-		bean.setStatus(DataUtility.getString(request.getParameter("Status")));
+		bean.setId(DataUtility.getLong(request.getParameter("id")));
+		bean.setLocation(DataUtility.getString(request.getParameter("location")));
+		bean.setBankName(DataUtility.getString(request.getParameter("bankName")));
+		bean.setCashAvailable(DataUtility.getDouble(request.getParameter("cashAvailable")));
+		bean.setStatus(DataUtility.getString(request.getParameter("status")));
 
 		populateDTO(bean, request);
 
@@ -68,5 +65,4 @@ public class AtmCtl extends BaseCtl<ATMBean, AtmModel> {
 	protected AtmModel getModel() {
 		return new AtmModel();
 	}
-
 }

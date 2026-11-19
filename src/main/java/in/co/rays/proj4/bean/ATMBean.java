@@ -6,7 +6,7 @@ public class ATMBean extends BaseBean {
 
 	private String Location;
 	private String BankName;
-	private String cashAvailable;
+	private double cashAvailable;
 	private String status;
 
 	public String getLocation() {
@@ -25,11 +25,11 @@ public class ATMBean extends BaseBean {
 		BankName = bankName;
 	}
 
-	public String getCashAvailable() {
+	public double getCashAvailable() {
 		return cashAvailable;
 	}
 
-	public void setCashAvailable(String cashAvailable) {
+	public void setCashAvailable(double cashAvailable) {
 		this.cashAvailable = cashAvailable;
 	}
 
@@ -41,14 +41,17 @@ public class ATMBean extends BaseBean {
 		this.status = status;
 	}
 
-	public void setResultSet(ResultSet rs) {
+	@Override
+	public void setResultset(ResultSet rs) {
 		try {
 			super.setResultset(rs);
-			this.setId(rs.getLong("ID"));
-			this.setLocation(rs.getString("Location"));
-			this.setBankName(rs.getString("BankName"));
-			this.setCashAvailable(rs.getString("CashAvailable"));
-			this.setStatus(rs.getString("Status"));
+
+			this.setId(rs.getLong("id"));
+			this.setLocation(rs.getString("location"));
+			this.setBankName(rs.getString("bank_name"));
+			this.setCashAvailable(rs.getDouble("cash_available"));
+			this.setStatus(rs.getString("status"));
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

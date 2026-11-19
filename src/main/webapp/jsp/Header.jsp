@@ -439,6 +439,12 @@
 							<li><a class="dropdown-item"
 								href="<%=ORSView.ATM_LIST_CTL%>"> ATM List </a></li>
 
+							<li><a class="dropdown-item"
+								href="<%=ORSView.CAR_RENTAL_CTL%>"> Add Car Rental </a></li>
+
+							<li><a class="dropdown-item"
+								href="<%=ORSView.CAR_RENTAL_LIST_CTL%>"> Car Rental List </a></li>
+
 
 
 						</ul></li>

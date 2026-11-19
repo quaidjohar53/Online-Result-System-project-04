@@ -44,6 +44,8 @@ public interface ORSView {
 	public String ONLINE_SHOPPING_LIST_VIEW = PAGE_FOLDER + "/OnlineShoppingListView.jsp";
 	public String ATM_VIEW = PAGE_FOLDER + "/AtmView.jsp";
 	public String ATM_LIST_VIEW = PAGE_FOLDER + "/AtmListView.jsp";
+	public String CAR_RENTAL_VIEW = PAGE_FOLDER + "/CarRentalView.jsp";
+	public String CAR_RENTAL_LIST_VIEW = PAGE_FOLDER + "/CarRentalListView.jsp";
 
 	public String USER_REGISTRATION_VIEW = PAGE_FOLDER + "/UserRegistrationView.jsp";
 	public String LOGIN_VIEW = PAGE_FOLDER + "/LoginView.jsp";
@@ -105,6 +107,8 @@ public interface ORSView {
 	public String Online_Shopping_LIST_CTL = APP_CONTEXT + "/ctl/OnlineShoppinglistCtl";
 	public String ATM_CTL = APP_CONTEXT + "/ctl/AtmCtl";
 	public String ATM_LIST_CTL = APP_CONTEXT + "/ctl/AtmListCtl";
+	public String CAR_RENTAL_CTL = APP_CONTEXT + "/ctl/CarRentalCtl";
+	public String CAR_RENTAL_LIST_CTL = APP_CONTEXT + "/ctl/CarRentalListCtl";
 
 	public String FACULTY_VIEW = PAGE_FOLDER + "/FacultyView.jsp";
 	public String FACULTY_LIST_VIEW = PAGE_FOLDER + "/FacultyListView.jsp";
